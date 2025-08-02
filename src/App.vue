@@ -1,15 +1,12 @@
 <template>
   <div class = "container">
-    <LoginPage />
+    <router-view />
   </div>
 </template>
 
 <script>
-import LoginPage from './views/LoginPage.vue';
 export default {
   name: 'App',
-  components: { LoginPage },
-
 }
 </script>
 
@@ -25,6 +22,17 @@ body{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo{
+  max-width: 60px;
+  max-height: auto;
 }
 
 </style>
