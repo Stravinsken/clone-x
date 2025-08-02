@@ -35,4 +35,17 @@ body{
   max-height: auto;
 }
 
+.button {
+    border-radius : 20px;
+    border: 1px solid white;
+    font-size: 15px;
+    font-weight: bold;
+    /* 위 우 아래 좌 */
+    /* 2개면 상하  좌우 */
+    margin: 10px 0px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
 </style>
