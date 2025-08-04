@@ -30,6 +30,7 @@ export default {
     methods: {
         login(){
             console.log(this.email, this.password);
+            this.$router.push('/main'); // 로그인 후 메인 페이지로 이동
         }
     }
 }
