@@ -2,6 +2,7 @@ import DemoPage from '../views/DemoPage.vue'
 import LoginPage from '../views/LoginPage.vue'
 import SignUpPage from '../views/SignUpPage.vue'
 import MainPage from '../views/MainPage.vue'
+import LifeCycle from '../views/LifeCycle.vue'
 import { createRouter, createWebHistory } from "vue-router"
 
 const router = createRouter({
@@ -26,6 +27,10 @@ const router = createRouter({
         {
             path: '/main',
             component: MainPage
+        },
+        {
+            path: '/life',
+            component: LifeCycle
         }
     ]
 })

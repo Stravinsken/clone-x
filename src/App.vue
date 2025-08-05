@@ -32,7 +32,7 @@ body{
 
 .logo{
   max-width: 60px;
-  max-height: auto;
+  height: auto;
 }
 
 .button {
@@ -52,6 +52,7 @@ body{
     color: red;
     font-size: small;
     width: 100%;
+    margin-bottom: 5px;
 }
 
 </style>

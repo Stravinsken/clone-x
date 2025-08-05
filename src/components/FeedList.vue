@@ -1,23 +1,27 @@
 <template>
-    <div class="feed-list-container">
-        <div class="feed-container" v-for="i in 10" :key="i">
-            <div class="feed-header">
-                <div class="feed-content">{{ i }}</div>
-                <button class="feed-delete-button">X</button>
-            </div>
-            <div class="feed-name">김유저</div>
-
+    <div class="feed-container">
+        <div class="feed-header">
+            <div class="feed-content">{{ feed.content }}</div>
+            <button class="feed-delete-button" >X</button>
         </div>
+        <div class="feed-name">{{ feed.user.name }}</div>
+
     </div>
 </template>
 
 <script>
 export default {
     name: 'FeedList',
+    props: {
+        feed: {
+            type: Object,
+            required: true
+        }
+    }
 }
 </script>
 
-<style>
+<style scoped>
 .feed-list-container{
     height: 60vh;
     overflow-y: auto;

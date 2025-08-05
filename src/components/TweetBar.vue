@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style scope>
+<style scoped>
 .container {
     display: flex;
     flex-direction: row;
@@ -24,7 +24,7 @@ export default {
 
 .input-form {
     box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 */
-    width: 200%;
+    width: 100%;
     height: 100%;
     border: 1px solid white;
     border-radius: 20px;
