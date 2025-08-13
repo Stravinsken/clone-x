@@ -6,6 +6,7 @@
         </div>
         <TweetBar />
         <FeedList />
+        <div class="logout" @click="logout">logout</div>
     </div>
 </template>
 
@@ -16,12 +17,18 @@ import { useUserStore } from '../store/user'
 
 export default {
     name: "MainPage",
+    components: { TweetBar, FeedList },
     data() {
         return {
             userStore: useUserStore()
         }
     },
-    components: { TweetBar, FeedList },
+    methods: {
+        logout() {
+            localStorage.clear();
+            this.$router.push("/");
+        }
+    }
 }
 </script>
 
@@ -31,5 +38,12 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.logout {
+    width: 100%;
+    text-align: right;
+    margin-top: 10px;
+    color: red;
+    cursor: pointer;
 }
 </style>
