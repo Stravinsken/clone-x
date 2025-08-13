@@ -1,14 +1,18 @@
 <template>
     <div class="container">
-        <input type="text" placeholder="what's good, user?" class="input-form" />
+        <input type="text" :placeholder="userStore.placeholder" class="input-form" />
         <img src="../assets/search.png" class="search-icon" />
     </div>
 </template>
 
 <script>
+import { useUserStore } from '../store/user'
 export default {
     name: 'TweetBar',
-    
+    setup() {
+        const userStore = useUserStore();
+        return { userStore };
+    }
 }
 </script>
 
